@@ -1,0 +1,129 @@
+<?php
+
+4. Funcionalidades da aplicação a desenvolver
+
+    
+half ->• Registar viagem de um balão.
+    
+    • Apresentar (no menu principal):
+        -> a quantidade de viagens realizadas, 
+        -> a quantidade de passageiros transportados
+    
+    • Apresentar os seguintes dados estatísticas:
+        -> quantidade total de viagens efetuadas por cada balão,
+        -> quantidade média de turistas transportados em cada viagem por cada balão,
+        -> balão(ões) que efetuou(aram) mais viagens
+        -> percentagem de turistas que selecionou cada destino
+        -> informação armazenada em cada lista de espera (incluindo a dimensão do maior grupo em cada lista).
+    
+    • Sempre que se realizar uma viagem acrescentar num log (textfile), a seguinte informação referente à viagem:
+        -> nº da viagem,
+        -> nº do balão, 
+        -> ponto de origem: total de passageiros transportados
+        
+********************************************************************************************
+********************************************************************************************
+                                NÃO ESQUECER -> Relatorio
+********************************************************************************************
+********************************************************************************************
+
+
+
+
+4. Funcionalidades da aplicação a desenvolver
+            done ->• Inserir, consultar, alterar e eliminar os dados dos balões.
+            done ->• Vender bilhetes 
+            done ->• consultar bilhetes vendidos para viagens com origem em cada ponto de paragem.
+        Apresentar (no menu principal):
+            done -> a quantidade de balões existentes
+            done -> a quantidade total de passageiros em lista de espera,
+            done -> e receita obtida com a venda de bilhetes.
+        Apresentar os seguintes dados estatísticas:
+            done ->• Armazenar e ler de ficheiro(s) binário(s) a informação de gestão do transporte.
+            
+            
+            
+            
+/*
+tBaloes
+    int idBalao, lotacaoMaxima;
+    char designacaoBalao[MAX_DESIGNACAO], pontoInicialBalao;
+    tdata dataFabrico;
+    //dados para viagens
+    int idViagem, atualPassageiros;
+    //dados para estatisticas
+    int totalViagem, totalPassageiros;
+    
+tViagens;  
+    int idViagem, idBalao, qntTuristasTransportados;
+    char inicioViagem, destinoViagem;
+
+tListaEspera
+    int idListaEspera, numeroPessoasEspera;
+    char pontoInicioViagem, pontoFimViagem;
+
+                    vBaloes[i].pontoInicialBalao;
+                    vBaloes[i].lotacaoMaxima;
+                    vBaloes[i].idViagem;
+                    
+                    int
+                    vViagens[nViagens].idViagem;
+                    vViagens[nViagens].idBalao
+                    vViagens[nViagens].qntTuristasTransportados
+                    char
+                    vViagens[nViagens].inicioViagem
+                    vViagens[nViagens].destinoViagem
+                    
+                    int
+                    vListaEspera[].idListaEspera;
+                    vListaEspera[].numeroPessoasEspera;
+                    char 
+                    vListaEspera[].pontoInicioViagem;
+                    vListaEspera[].pontoFimViagem;
+
+balao ponto Inicio -> tBalao[].pontoInicialBalao
+    tirar pessoas
+        verificar ponto de saida == tBalao[].pontoInicialBalao
+        ver lotacao disponivel
+    entrar pessoas
+        correr array lista de espera para preencher balao
+            atualizar viagens
+            remover da lista de espera
+balao ponto Fim -> atualizar ( tBalao[].pontoInicialBalao ) 
+fim funcao
+*/   
+
+
+
+// RETIRAR PASSAGEIROS E COLOCAR NOVOS PASSAGEIROS NO BALAO
+
+    //retirar da viagem
+        // * tListaEspera <- (vListaEspera, vViagens, pontoBalao, contadorListaEspera, qntDisponivel, idBalao)
+        //      for(qntDisponivel<passageiros)
+        //          vListaEspera[].pontoInicioViagem == pontoBalao
+        //              vListaEspera[].numeroPessoasEspera < passageiros disponiveis
+        //                  passageiros = vListaEspera[].numeroPessoasEspera;
+        //                  idListaEspera = vListaEspera[].idListaEspera;
+        
+        //                  vViagens[] =  [tListaEspera -> tViagem]
+        
+    // colocar na viagem
+        //      [tListaEspera -> tViagem]
+        //          tViagens * tviagens <- (vListaEspera, pontoBalao, contadorListaEspera, idListaEspera, idBalao)
+        //                              vViagens[].... = vListaEspera[idListaEspera]....
+        //                              vViagens[].idBalao = idBalao;
+        //                              vViagens[].status = 1;
+        //                          devolve [vetor]<>tViagens
+        
+    // Eliminar da lista de espera
+        // [eliminar tListaEspera[idListaEspera]]
+        
+        //      devolve [vetor]<>tListaEspera
+        
+    // atualizar total passageiros, total viagens
+
+// BALAO ANDA PARA A PROXIMA PARAGEM
+
+// FIM :D
+
+?>
